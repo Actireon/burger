@@ -1,6 +1,7 @@
 {
   "name": "react-complete-guide",
   "version": "0.1.0",
+  "homepage": "https://actireon.github.io/Burger",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.2",
@@ -50,7 +51,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+	"predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -92,5 +95,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
